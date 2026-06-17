@@ -72,3 +72,7 @@ def omikuji():
     ]
 
     return omikuji_list[random.randrange(10)]
+
+@app.post("/present")
+async def give_present(present):
+    return {"response": f"あなたが入力したのは {present} ですね。"} 
